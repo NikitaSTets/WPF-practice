@@ -1,0 +1,16 @@
+C:\Users\Никита\documents\visual studio 2015\Projects\Task\Task\obj\Debug\App.g.cs
+C:\Users\Никита\documents\visual studio 2015\Projects\Task\Task\obj\Debug\Task_MarkupCompile.cache
+C:\Users\Никита\documents\visual studio 2015\Projects\Task\Task\obj\Debug\Task_MarkupCompile.lref
+C:\Users\Никита\documents\visual studio 2015\Projects\Task\Task\obj\Debug\Task.exe
+C:\Users\Никита\documents\visual studio 2015\Projects\Task\Task\obj\Debug\Task.pdb
+C:\Users\Никита\documents\visual studio 2015\Projects\Task\Task\bin\Debug\Task.exe.config
+C:\Users\Никита\documents\visual studio 2015\Projects\Task\Task\bin\Debug\Task.exe
+C:\Users\Никита\documents\visual studio 2015\Projects\Task\Task\obj\Debug\Task.g.resources
+C:\Users\Никита\documents\visual studio 2015\Projects\Task\Task\obj\Debug\Task.Properties.Resources.resources
+C:\Users\Никита\documents\visual studio 2015\Projects\Task\Task\obj\Debug\TaskI.csproj.GenerateResource.Cache
+C:\Users\Никита\documents\visual studio 2015\Projects\Task\Task\bin\Debug\Task.pdb
+C:\Users\Никита\documents\visual studio 2015\Projects\Task\Task\obj\Debug\TaskI.csprojResolveAssemblyReference.cache
+C:\Users\Никита\documents\visual studio 2015\Projects\Task\Task\obj\Debug\MainWindow.g.cs
+C:\Users\Никита\documents\visual studio 2015\Projects\Task\Task\obj\Debug\MainWindow.baml
+C:\Users\Никита\documents\visual studio 2015\Projects\Task\Task\obj\Debug\Confirm.g.cs
+C:\Users\Никита\documents\visual studio 2015\Projects\Task\Task\obj\Debug\Confirm.baml

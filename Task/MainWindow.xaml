@@ -1,0 +1,78 @@
+﻿<Window x:Class="TaskI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TaskI"
+        mc:Ignorable="d"
+        Title="List of students" Height="350" Width="521.297">
+    <Grid Background="Lavender" Margin="0,0,260,0" Width="auto">
+        <!--Задаем количество строки в Grid-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <!--Задаем колонки в Grid-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="33*"/>
+            <ColumnDefinition Width="37*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="DataGrid"  IsReadOnly="False" AutoGenerateColumns="False" HorizontalGridLinesBrush="DarkGray"
+    RowBackground="LightGray" AlternatingRowBackground="White" Margin="-3,0,0,-4" Grid.ColumnSpan="3" Grid.RowSpan="2" RenderTransformOrigin="0.5,0.5" Height="320" VerticalAlignment="Bottom">
+            <DataGrid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.341"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </DataGrid.RenderTransform>
+            <DataGrid.Columns>
+                <!-- отображение "шапки" списка-->
+                <DataGridTextColumn   Header="Имя"  Width="90" >
+                    <!-- отображение фамилии и имени в строке как единое целое; -->
+                    <DataGridTextColumn.Binding>
+                        <MultiBinding StringFormat="{}{0}  {1}">
+                            <Binding Path="Name" />
+                            <Binding Path="LastName" />
+                        </MultiBinding>
+                    </DataGridTextColumn.Binding>
+                </DataGridTextColumn>
+                <DataGridHyperlinkColumn Header="Возраст" Binding="{Binding Path=Age}" Width="80" />
+                <DataGridTextColumn Header="Пол" Binding="{Binding Path=Gender}" Width="80" />
+            </DataGrid.Columns>
+
+        </DataGrid>
+        <Grid Height="316" Margin="95,5,-262,-1" VerticalAlignment="Top" Grid.Column="2" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="19*"/>
+                <RowDefinition Height="60*"/>
+            </Grid.RowDefinitions>
+            <!-- кнопка для добавления записей-->
+            <Button x:Name="button" Content="Add" HorizontalAlignment="Left" Margin="30,134,0,0" VerticalAlignment="Top" Width="75" Grid.Row="1" Click="Add_Click"/>
+            <!--TextBox для ввода имени  -->
+            <TextBox x:Name="studentFirstNameTextBox" HorizontalAlignment="Left" Height="23" Margin="30,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+            <!--TextBox для ввода фамилии -->
+            <TextBox x:Name="studentLastNameTextBox" HorizontalAlignment="Left" Height="23" Margin="30,0,0,217" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="120"/>
+            <!--TextBox для ввода возраста -->
+            <TextBox x:Name="studentAgeTextBox" HorizontalAlignment="Left" Height="23" Margin="30,46,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <!--Метка информирующая,что нужно вводить имя в этот textbox -->
+            <Label x:Name="firstNameLabel" Content="First name:" HorizontalAlignment="Left" Margin="30,3,0,0" VerticalAlignment="Top"/>
+            <!--Метка информирующая,что нужно вводить фамилию в этот textbox -->
+            <Label x:Name="lastNameLabel" Content="Last name" HorizontalAlignment="Left" Margin="30,52,0,0" VerticalAlignment="Top"/>
+            <!--Метка информирующая,что нужно вводить возраст в этот textbox -->
+            <Label x:Name="AgeLabel" Content="Age" HorizontalAlignment="Left" Margin="30,23,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+            <!--RadioButton для выбора пола -->
+            <RadioButton x:Name="manRadioButton" IsChecked="True" Content="Man" HorizontalAlignment="Left" Margin="30,83,0,0" Grid.Row="1" VerticalAlignment="Top" />
+            <RadioButton x:Name="womanRadioButton" Content="Women" HorizontalAlignment="Left" Margin="136,86,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+            <!--Кнопка для удаления записей из таблицы -->
+            <Button x:Name="deleteBtn" Content="Delete" HorizontalAlignment="Left" Margin="136,134,0,0" Grid.Row="1" VerticalAlignment="Top" Width="65" RenderTransformOrigin="1.246,0.727" Click="deleteBtn_Click"/>
+            <!--Метка информирующая,о допущенных ошибках-->
+            <Label x:Name="errorLabel" Content="" HorizontalAlignment="Left" Margin="10,177,0,0" Grid.Row="1" VerticalAlignment="Top" Width="242"/>
+
+        </Grid>
+        <!--Метка информирующая,о пустом списке-->
+        <Label x:Name="labelListEmpty" Visibility="Hidden" Content="List is empty" HorizontalAlignment="Left" Margin="0,5,0,0" Grid.RowSpan="2" VerticalAlignment="Top" RenderTransformOrigin="0.5,-0.885" Grid.ColumnSpan="3" Width="243"/>
+    </Grid>
+</Window>
